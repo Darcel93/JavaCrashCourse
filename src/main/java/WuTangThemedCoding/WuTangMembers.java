@@ -1,4 +1,4 @@
-package org.example;
+package WuTangThemedCoding;
 
 public class WuTangMembers {
     static String[] WuTangMembers(){
