@@ -12,8 +12,9 @@ public class WuTangNameGeneratorUpdate {
         String FirstName = input.nextLine();
         System.out.print("Enter Last Name: ");
         String LastName = input.nextLine();
-        FirstName = FirstNames();
-        System.out.println("This is the value of the first name: " + FirstName);
+        System.out.print ("Enter preferred gender: ");
+        String gender = input.nextLine();
+        //FirstName = FirstNames();
         LastName = SecondNames(FirstName);
         String NameFinal = FirstName + " " + LastName + " " + TitleName();
 
@@ -24,11 +25,11 @@ public class WuTangNameGeneratorUpdate {
     }
 
 
-    public static String FirstNames(){
+    public static String FirstNames(String partone){
         Random generate = new Random();
-        int i = generate.nextInt(22);
+        int i = generate.nextInt(50);
 
-        String[] FullName = new String [22];
+        String[] FullName = new String [50];
         FullName[0] = "Crimson";
         FullName[1] = "Shadow";
         FullName[2] = "Iron";
@@ -51,11 +52,44 @@ public class WuTangNameGeneratorUpdate {
         FullName[19] = "Live";
         FullName[20] = "Monarch";
         FullName[21] = "God";
+        FullName[22] = "Venom";
+        FullName[23] = "Blaze";
+        FullName[24] = "Rebel";
+        FullName[25] = "Ghost";
+        FullName[26] = "Savage";
+        FullName[27] = "Cobra";
+        FullName[28] = "Inferno";
+        FullName[29] = "Rogue";
+        FullName[30] = "Thunder";
+        FullName[31] = "Shogun";
+        FullName[32] = "Wicked";
+        FullName[33] = "Bronze";
+        FullName[34] = "Viper";
+        FullName[35] = "Mystic";
+        FullName[36] = "Fury";
+        FullName[37] = "Samurai";
+        FullName[38] = "Razor";
+        FullName[39] = "Eclipse";
+        FullName[40] = "Titan";
+        FullName[41] = "Onyx";
+        FullName[42] = "Serpent";
+        FullName[43] = "Wraith";
+        FullName[44] = "Hawk";
+        FullName[45] = "Volcanic";
+        FullName[46] = "Prophet";
+        FullName[47] = "Jackal";
+        FullName[48] = "Omega";
+        FullName[49] = "Zen";
+
+        String full = FullName[generate.nextInt(50)];
+        while (full.equals(partone)) {
+           // full = FullName
+        }
         return FullName[i];
+
     }
 
     public static String SecondNames(String other){
-        System.out.println("This is the other value: " + other);
         Random generate = new Random();
         int i = generate.nextInt(22);
 
@@ -88,7 +122,6 @@ public class WuTangNameGeneratorUpdate {
         while (is_equals) {
             i = generate.nextInt(22);
             picked = FullName[i];
-            System.out.println("In a While Loop");
            is_equals = picked.equals(other);
         }
         return picked;
@@ -96,8 +129,8 @@ public class WuTangNameGeneratorUpdate {
 
     public static String TitleName(){
         Random generate = new Random();
-        int b = generate.nextInt(0, 11);
-        String[] Titles = new String[11];
+        int b = generate.nextInt(0, 50);
+        String[] Titles = new String[50];
         Titles[0] = "The Chamber Guardian";
         Titles[1] = "The Beat Assassin";
         Titles[2] = "The Rhythm Monk";
@@ -109,6 +142,45 @@ public class WuTangNameGeneratorUpdate {
         Titles[8] = "Strategist Supreme";
         Titles [9] = "The Silent Conqueror";
         Titles[10] = "The Elder God";
+        Titles[11] = "The Sword Scholar";
+        Titles[12] = "The Venomous Sage";
+        Titles[13] = "Keeper of the 36 Chambers";
+        Titles[14] = "The Shaolin Architect";
+        Titles[15] = "The Midnight Enforcer";
+        Titles[16] = "Ruler of the Wu";
+        Titles[17] = "The Ghost Assassin";
+        Titles[18] = "The Forbidden One";
+        Titles[19] = "Protector of the Clan";
+        Titles[20] = "The Grim Philosopher";
+        Titles[21] = "The Temple Watcher";
+        Titles[22] = "Master of the Iron Fist";
+        Titles[23] = "The Lyrical Samurai";
+        Titles[24] = "Warden of the East";
+        Titles[25] = "The Crown Holder";
+        Titles[26] = "The Celestial Monk";
+        Titles[27] = "Slayer of the Wicked";
+        Titles[28] = "The Street Ronin";
+        Titles[29] = "The Ruthless Tactician";
+        Titles[30] = "Voice of the Ancestors";
+        Titles[31] = "The Jade Emperor";
+        Titles[32] = "The War Poet";
+        Titles[33] = "The Unseen Hand";
+        Titles[34] = "Disciple of Chaos";
+        Titles[35] = "The Dragon Whisperer";
+        Titles[36] = "The Bone Collector";
+        Titles[37] = "The Grandmaster";
+        Titles[38] = "Herald of the Storm";
+        Titles[39] = "The Night Phantom";
+        Titles[40] = "The Bloodline King";
+        Titles[41] = "The Fifth Element";
+        Titles[42] = "The Scroll Keeper";
+        Titles[43] = "The Raw Diamond";
+        Titles[44] = "The Concrete Prophet";
+        Titles[45] = "The Final Boss";
+        Titles[46] = "The Wu Disciple";
+        Titles[47] = "The Apex Predator";
+        Titles[48] = "The Hood Oracle";
+        Titles[49] = "The Eternal Flame";
 
         return Titles[b];
 
